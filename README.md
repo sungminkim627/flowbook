@@ -8,6 +8,9 @@ Perfect for data scientists, ML engineers, and analysts who need to explore mult
 
 ---
 
+## Screenshot
+<img width="970" height="1089" alt="flowbook_screenshot" src="https://github.com/user-attachments/assets/0d6533ec-4eab-4047-bb54-3556c4b6a834" />
+
 ## ✨ Key Features
 
 - **🌳 Non-Linear Execution** — Create branching paths of analysis instead of rigid sequential cells
