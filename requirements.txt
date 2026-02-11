@@ -1,0 +1,18 @@
+# Core dependencies
+click==8.1.7                # CLI framework
+jsonschema==4.23.0          # JSON validation for .flowbook files
+networkx==3.3               # DAG traversal and dependency graph
+jupyter_client==8.6.2       # Jupyter kernel communication
+
+# Optional for development / testing
+pytest==8.3.3               # testing
+black==24.10.0              # code formatter
+isort==5.13.2               # import sorter
+
+ipykernel
+
+# API stuff
+fastapi 
+uvicorn[standard]           # ASGI server with standard extras
+pydantic
+aiofiles                    # For serving static files

@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "name": "Example",
+    "kernel": "python3",
+    "format_version": 1
+  },
+  "root": "A",
+  "nodes": {
+    "A": {
+      "type": "code",
+      "source": "x = 1\nprint(x)",
+      "parents": [],
+      "outputs": []
+    },
+    "B": {
+      "type": "code",
+      "source": "x + 1",
+      "parents": [
+        "A"
+      ],
+      "outputs": [
+        {
+          "mime_type": "text/plain",
+          "data": {
+            "text/plain": "2"
+          }
+        },
+        {
+          "mime_type": "text/plain",
+          "data": {
+            "text/plain": "2"
+          }
+        }
+      ]
+    }
+  }
+}

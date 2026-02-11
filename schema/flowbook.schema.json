@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowbook.dev/schema/v1",
+  "title": "Flowbook Document Schema",
+  "description": "JSON schema for Flowbook branchable notebooks",
+  "type": "object",
+  "required": ["metadata", "nodes", "root"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["kernel"],
+      "properties": {
+        "name": { "type": "string" },
+        "kernel": { "type": "string" },
+        "format_version": { "type": "integer", "default": 1 },
+        "created": { "type": "string", "format": "date-time" }
+      }
+    },
+    "root": { "type": "string", "description": "ID of the root node" },
+    "nodes": {
+      "type": "object",
+      "patternProperties": {
+        "^[A-Za-z0-9_-]+$": {
+          "type": "object",
+          "required": ["type", "source"],
+          "properties": {
+            "type": { "type": "string", "enum": ["code", "markdown"] },
+            "source": { "type": "string" },
+            "parents": {
+              "type": "array",
+              "items": { "type": "string" },
+              "default": []
+            },
+            "outputs": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "mime_type": { "type": "string" },
+                  "data": {}
+                }
+              },
+              "default": []
+            }
+          }
+        }
+      }
+    }
+  }
+}
